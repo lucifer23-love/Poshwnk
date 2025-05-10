@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Poshank Birthday Invitation Card</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #333;
+  }
+  .card {
+    background: white;
+    width: 320px;
+    max-width: 90vw;
+    height: 580px;
+    border-radius: 25px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .balloons {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 0;
+  }
+  .balloon {
+    width: 40px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #ff5f6d, #ffc371);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+  }
+  .balloon:nth-child(2) {
+    background: radial-gradient(circle at 30% 30%, #24c6dc, #514a9d);
+    animation-delay: 1s;
+  }
+  .balloon:nth-child(3) {
+    background: radial-gradient(circle at 30% 30%, #7b4397, #dc2430);
+    animation-delay: 2s;
+  }
+  .balloon-string {
+    width: 2px;
+    height: 40px;
+    background: #555;
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+  }
+  @keyframes float {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(5px) translateY(-10px); }
+  }
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    color: #f85c37;
+    z-index: 1;
+  }
+
+  .subtitle {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 25px;
+    z-index: 1;
+  }
+
+  .details {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    width: 100%;
+    z-index: 1;
+  }
+  .details strong {
+    color: #f85c37;
+  }
+
+  button.rsvp-btn {
+    background: #f85c37;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 14px 35px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(248, 92, 55, 0.5);
+    transition: background 0.3s ease;
+    margin-top: auto;
+    z-index: 1;
+  }
+  button.rsvp-btn:hover,
+  button.rsvp-btn:focus {
+    background: #cc4831;
+    outline: none;
+  }
+
+  @media (max-width: 600px) {
+    .card {
+      width: 90vw;
+      height: 580px;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.4rem;
+    }
+    .details {
+      font-size: 1rem;
+    }
+    button.rsvp-btn {
+      font-size: 1rem;
+      padding: 12px 28px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="card" role="main" aria-label="Birthday invitation card">
+    <div class="balloons" aria-hidden="true">
+      <div class="balloon"><div class="balloon-string"></div></div>
+      <div class="balloon"><div class="balloon-string"></div></div>
+      <div class="balloon"><div class="balloon-string"></div></div>
+    </div>
+    <h1>You're Invited!</h1>
+    <div class="subtitle">Come Celebrate with Us</div>
+    <div class="details">
+      <p><strong>Who:</strong> Poshank's Birthday Party</p>
+      <p><strong>When:</strong> Sunday,May 11th, 2024<br />2:00 PM - 6:00 PM</p>
+      <p><strong>Where:</strong>  cafe 4u cafe </p>
+    </div>
+    <button class="rsvp-btn" aria-label="RSVP to birthday party" onclick="alert('Thank you for your RSVP! We look forward to celebrating with you!')">Apply</button>
+  </div>
+<script>
+  // No additional scripting needed for this simple interaction
+</script>
+</body>
+      </html>
